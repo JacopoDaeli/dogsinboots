@@ -68,16 +68,24 @@
             padding: 20px 0;
             border-bottom: 1px solid #444;
             font-size: 1.5em;
+            z-index: 200;
         }
         footer {
             text-align: center;
             padding: 10px;
             /* border-top: 1px solid #444; */
         }
+        a:hover, a:active {
+          color: rgba(110, 109, 109, 0.7);
+        }
+        a:visited {
+          color: #fff;
+        }
 
         canvas {
             position: fixed;
             top: 0;
+            z-index: -10;
         }
         div.overlay {
             width: 100%;
@@ -163,22 +171,22 @@
             <p>We are always on the lookout for talented individuals to join our team. If you are passionate about game development and want to be part of a flexible and creative environment, please reach out!<p>
             <p>Current open positions:</p>
             <ul>
-                <li>2D Artist</li>
-                <li>Motion Graphic Designer</li>
-                <li>Unity Developer</li>
+                <li><a href="https://alert-change-d86.notion.site/2D-Artist-d6d460778bff48cf93a6a87085558498" target="_top">Artist</a></li>
+                <li><a href="https://alert-change-d86.notion.site/Motion-Graphic-Designer-4285510bcc99465bb96c6b89863743eb" target="_top">Motion Graphic Designer</a></li>
+                <li><a href="https://alert-change-d86.notion.site/Unity-Developer-15cde33c496343fb9e5b95f511686dd7" target="_top">Unity Developer</a></li>
             </ul>
             <p>To apply, please send your resume and portfolio to <a href="mailto:jobs@dogsinboots.com" style="color: #fff;">jobs@dogsinboots.com</a>. We look forward to hearing from you!</p>
         </section>
         <section id="contacts" style="border-bottom: 0px;">
             <h2>Contacts</h2>
-            <p><a href="mailto:hi@dogsinboots.com" style="color: #fff;">hi@dogsinboots.com</a></p>
-            <p>177A E Main St #135<br />New Rochelle, NY 10801</p>
+            <p>For any general inquries please contact us at <a href="mailto:hi@dogsinboots.com" style="color: #fff;">info@dogsinboots.com</a>.</p>
         </section>
     </div>
     <canvas></canvas>
 
     <footer>
         <p>&copy; 2024 Dogs in Boots, LLC. All rights reserved.</p>
+        <p>177A E Main St #135, New Rochelle, NY 10801</p>
     </footer>
 
     <script>
@@ -248,7 +256,6 @@
           }
 
           this.update = () => {
-
             if (this.x >= canvas.width || this.x <= 0) {
               this.dx = -this.dx;
             }
