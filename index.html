@@ -25,7 +25,7 @@
             color: #fff;
         }
         .container {
-            width: 60%;
+            width: 90%;
             margin: auto;
             overflow: hidden;
             padding: 20px;
@@ -45,6 +45,7 @@
             border-bottom: 1px solid #444;
             position: relative;
             z-index: 1000;
+            display: none;
         }
         nav.fixed {
             position: fixed;
@@ -56,12 +57,12 @@
             text-decoration: none;
             margin: 0 15px;
             text-transform: uppercase;
-            font-size: 1.5em;
+            font-size: 1.2em;
         }
         section {
             padding: 20px 0;
             border-bottom: 1px solid #444;
-            font-size: 2em;
+            font-size: 1.5em;
         }
         footer {
             text-align: center;
@@ -88,7 +89,6 @@
             font-weight: 100;
             text-transform: uppercase;
             user-select: none;
-            
             text-shadow: 0px 0px 15px hsl(200,100%,30%);
         }
         div.overlay h2 {
@@ -100,8 +100,22 @@
             text-transform: uppercase;
             letter-spacing: 0.15em;
             user-select: none;
-            
             text-shadow: 0px 0px 5px rgba(255,255,255,0.15);
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                width: 65%;
+            }
+            nav {
+              display: block;
+            }
+            nav a {
+                font-size: 1.5em;
+            }
+            section {
+                font-size: 1.8em;
+            }
         }
     </style>
 </head>
