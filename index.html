@@ -30,6 +30,9 @@
             overflow: hidden;
             padding: 20px;
         }
+        .first {
+          padding-top: 0px;
+        }
         header {
             text-align: center;
             padding: 20px 0 0 0;
@@ -109,6 +112,9 @@
             .container {
                 width: 65%;
             }
+            .first {
+              padding-top: 20px;
+            }
             nav {
               display: block;
             }
@@ -138,7 +144,7 @@
             <a href="#contacts">Contacts</a>
         </div>
     </nav>
-    <div id="main" class="container">
+    <div id="main" class="container first">
         <section id="story">
             <h2>Story</h2>
             <p>We are a passionate indie game studio based in New York City.</p>
@@ -183,6 +189,10 @@
         var sticky = navbar.offsetTop;
 
         function fixNav() {
+          if (window.innerWidth < 768) {
+            return;
+          }
+        
           if (window.pageYOffset >= sticky) {
             navbar.classList.add("fixed")
             main.style.marginTop = (sticky - 60) + 'px';
